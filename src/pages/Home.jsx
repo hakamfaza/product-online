@@ -117,13 +117,16 @@ export default function Home() {
     )),
   });
 
-  // const filterBrand = [];
-  // product.forEach((item) => {
-  //   if (!filterBrand[item.brand]) { filterBrand[item.brand] = []; }
-  //   filterBrand[item.brand].push(item);
-  // }, []);
+  const getValueBrand = [];
+  let filterBrand;
 
-  const getBrand = product.map((item) => ({
+  const filterByBrand = product.filter((o) => {
+    filterBrand = getValueBrand.indexOf(o.brand) === -1;
+    getValueBrand.push(o.brand);
+    return filterBrand;
+  });
+
+  const getBrand = filterByBrand.map((item) => ({
     text: item.brand,
     value: item.brand,
   }));
