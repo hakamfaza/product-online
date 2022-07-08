@@ -9,7 +9,10 @@ import {
   Table, Button, Input, Space,
 } from 'antd';
 import Highlighter from 'react-highlight-words';
+
 import product from '../database/product.json';
+
+import Navbar from '../components/navbar/navbar';
 
 export default function Home() {
   const [searchText, setSearchText] = useState('');
@@ -173,6 +176,11 @@ export default function Home() {
   const data = product;
 
   return (
-    <Table dataSource={data} columns={columns} />
+    <>
+      <Navbar />
+      <div style={{ padding: '100px 50px 50px 50px' }}>
+        <Table dataSource={data} columns={columns} />
+      </div>
+    </>
   );
 }
