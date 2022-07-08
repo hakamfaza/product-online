@@ -1,0 +1,57 @@
+.detail .container {
+  padding: 100px 70px 20px 70px
+}
+
+.detail .boxOfTitle {
+  display: flex;
+}
+
+.detail .rating {
+  margin-left: 10px;
+  margin-top: 15px;
+  color: gray;
+}
+
+.detail .textCategory {
+  margin-top: -20px;
+  color: gray;
+}
+
+.detail .mainBox {
+  display: flex;
+}
+
+.detail .carousel {
+  width: 400px
+}
+
+.detail .img {
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.detail .secondBox {
+  padding-left: 100px;
+}
+
+.detail .stock {
+  padding: 2px;
+  border: solid 1px gray;
+  width: 30px;
+  text-align: center;
+  border-radius: 2px;
+}
+
+.detail .text {
+  margin-top: -15px;
+  font-size: 16px;
+}
+
+.detail .priceBox {
+  display: flex;
+  width: 150px;
+  margin-bottom: -10px;
+  justify-content: space-between;
+}

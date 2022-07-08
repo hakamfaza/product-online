@@ -9,6 +9,7 @@ import {
   Table, Button, Input, Space,
 } from 'antd';
 import Highlighter from 'react-highlight-words';
+import { Link } from 'react-router-dom';
 
 import product from '../database/product.json';
 
@@ -178,8 +179,10 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <div style={{ padding: '100px 50px 50px 50px' }}>
-        <Table dataSource={data} columns={columns} />
+      <div style={{ padding: '100px 70px 20px 70px' }}>
+        <Link to={`product/${data.id}`}>
+          <Table dataSource={data} columns={columns} />
+        </Link>
       </div>
     </>
   );

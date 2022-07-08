@@ -1,6 +1,7 @@
 import {
   BrowserRouter, Route, Routes,
 } from 'react-router-dom';
+import Detail from '../pages/Detail';
 import Home from '../pages/Home';
 
 export default function router() {
@@ -8,9 +9,9 @@ export default function router() {
     <BrowserRouter>
       <Routes path="/">
         <Route index element={<Home />} />
-        {/* <Route path="/example">
-          <Route index element={<Example />} />
-        </Route> */}
+        <Route path="/product/:id">
+          <Route index element={<Detail />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );
