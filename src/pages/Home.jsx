@@ -117,18 +117,11 @@ export default function Home() {
     )),
   });
 
-  // const filterBrand = product.reduce((acc, cur) => {
-  //   if (acc.map((item) => item.brand).includes(cur.brand)) {
-  //     const found = acc.find((entry) => entry.brand === cur.brand);
-  //     found.brand.push(cur.brand);
-  //     return acc;
-  //   }
-  //   // cur.brand = [cur.brand];
-  //   // acc.push(cur);
-  //   return acc;
+  // const filterBrand = [];
+  // product.forEach((item) => {
+  //   if (!filterBrand[item.brand]) { filterBrand[item.brand] = []; }
+  //   filterBrand[item.brand].push(item);
   // }, []);
-
-  // console.log(filterBrand);
 
   const getBrand = product.map((item) => ({
     text: item.brand,

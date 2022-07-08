@@ -1,0 +1,118 @@
+.about .container {
+  padding: 100px 70px 20px 70px;
+  background-image: url('../img/bg.jpg');
+  background-size: cover;
+  height: 100vh;
+}
+
+.about .container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background-color: rgba(11, 11, 11, 0.5);
+}
+
+.about .box {
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 79vh;
+  margin-left: 50px;
+}
+
+.about .title {
+  color: rgb(255, 255, 255);
+  font-size: 52px;
+  font-weight: bold;
+}
+
+.about .description {
+  color: rgb(255, 255, 255);
+  max-width: 50%;
+  margin-top: -30px;
+}
+
+.about .jumbotron {
+  height: 100vh;
+  background-color: rgb(248, 248, 248);
+  display: flex;
+}
+
+.about .mainBox {
+  width: 50%;
+  height: 100%;
+}
+
+.about .mainContent {
+  width: 100%;
+  height: 75%;
+  background-image: url('../img/person.jpg');
+  background-size: cover;
+}
+
+.about .secondBox {
+  width: 50%;
+}
+
+.about .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 100px;
+  height: 75%;
+  background-color: rgb(248, 248, 248);
+}
+
+.about .titleContent {
+  color: rgb(67, 67, 67);
+  font-weight: bold;
+  font-size: 48px;
+}
+
+.about .line {
+  margin-top: -25px;
+  margin-left: 6px;
+  display: flex;
+  position: relative;
+  justify-content: flex-start;
+  background-color:rgb(67, 67, 67);
+  border: solid rgb(67, 67, 67) 2px;
+  width: 80px;
+}
+
+.about .position {
+  margin-left: 6px;
+  color: rgb(67, 67, 67);
+  margin-top: -15px;
+  font-style: italic;
+}
+
+.about .lineSecond {
+  margin-top: -25px;
+  margin-left: 3px;
+  display: flex;
+  position: relative;
+  justify-content: flex-start;
+  background-color:rgb(67, 67, 67);
+  border: solid rgb(67, 67, 67) 2px;
+  width: 160px;
+}
+
+.about .name {
+  color: rgb(67, 67, 67);
+  margin-top: 15px;
+  margin-left: 5px;
+}
+
+.about .thridBox {
+  background-image: url('../img/working.jpg');
+  height: 75%;
+  width: 100%;
+  background-size: cover;
+}

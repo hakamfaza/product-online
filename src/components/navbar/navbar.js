@@ -11,7 +11,7 @@ export default function Navbar() {
       <Header
         style={{
           position: 'fixed',
-          zIndex: 3,
+          zIndex: 50,
           width: '100%',
         }}
       >
@@ -22,10 +22,11 @@ export default function Navbar() {
           items={nav.map((item) => ({
             key: item,
             label: (
-              <Link to={item.toLocaleLowerCase() === 'home' ? '/' : `${item.toLocaleLowerCase()}`}>
+              <Link to={item.toLocaleLowerCase() === 'home' ? '/' : `/${item.toLocaleLowerCase()}`}>
                 <p style={{
                   padding: '0',
                   margin: '0',
+                  color: 'white',
                 }}
                 >
                   {item}
