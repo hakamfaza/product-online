@@ -137,12 +137,26 @@ export default function Home() {
 
   const columns = [
     {
+      title: 'No',
+      key: 'index',
+      render: (text, record, index) => index + 1,
+      width: '5%',
+    },
+    {
       title: 'Photo',
       dataIndex: 'thumbnail',
-      width: '15%',
+      width: '20%',
       render: (t, record) => (
         <div>
-          <img src={record.thumbnail} alt="product" style={{ width: '130px', height: '100px', objectFit: 'cover' }} />
+          <Link to={`/product/${record.id}`}>
+            <img
+              src={record.thumbnail}
+              alt="product"
+              style={{
+                width: '150px', height: '120px', objectFit: 'cover', borderRadius: '5px',
+              }}
+            />
+          </Link>
         </div>
       ),
     },
@@ -154,15 +168,31 @@ export default function Home() {
       ...getColumnSearchProps('title'),
       sorter: (a, b) => a.title.length - b.title.length,
       sortDirections: ['descend', 'ascend'],
+      render: (text, record, index) => (
+        <div key={index}>
+          <Link to={`/product/${record.id}`} style={{ color: 'black' }}>
+            {text}
+          </Link>
+        </div>
+
+      ),
     },
     {
       title: 'Brand',
       dataIndex: 'brand',
-      width: '20%',
+      width: '25%',
       filters: getBrand,
       filterMode: 'tree',
       filterSearch: true,
       onFilter: (value, record) => record.brand.includes(value),
+      render: (text, record, index) => (
+        <div key={index}>
+          <Link to={`/product/${record.id}`} style={{ color: 'black' }}>
+            {text}
+          </Link>
+        </div>
+
+      ),
     },
     {
       title: 'Price',
@@ -170,6 +200,14 @@ export default function Home() {
       key: 'price',
       sorter: (a, b) => a.price - b.price,
       sortDirections: ['descend', 'ascend'],
+      render: (text, record, index) => (
+        <div key={index}>
+          <Link to={`/product/${record.id}`} style={{ color: 'black' }}>
+            {text}
+          </Link>
+        </div>
+
+      ),
       // width: '',
     },
   ];
@@ -180,9 +218,9 @@ export default function Home() {
     <>
       <Navbar />
       <div style={{ padding: '100px 70px 20px 70px' }}>
-        <Link to={`product/${data.id}`}>
-          <Table dataSource={data} columns={columns} />
-        </Link>
+        {/* <Link to={`product/${data.id}`}> */}
+        <Table dataSource={data} columns={columns} />
+        {/* </Link> */}
       </div>
     </>
   );
