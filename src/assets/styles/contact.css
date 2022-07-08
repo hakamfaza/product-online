@@ -1,0 +1,61 @@
+.contact .container {
+  padding: 60px 0px 20px 0px
+}
+
+.contact .boxContact {
+  display: flex;
+  justify-content: center;
+  height: 40vh;
+  align-items: center;
+  background-color: #001529
+}
+
+.contact .title {
+  font-size: 52px;
+  color: #FFF;
+}
+
+.contact .contents {
+  display: flex;
+  justify-content: space-around;
+}
+
+.contact .mainBox {
+  padding: 30px;
+  text-align: center;
+  width: 100%;
+}
+
+.contact .secondBox {
+  padding: 30px;
+  text-align: center;
+  width: 100%;
+}
+
+.contact .thridBox {
+  padding: 30px;
+  text-align: center;
+  width: 100%;
+}
+
+.contact .boxIcon {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-around;
+}
+
+.contact .icon {
+  font-size: 52px;
+  color: rgb(202, 202, 202);
+}
+
+.contact .titleAction {
+  font-weight: 400;
+}
+
+.contact .textEmail {
+  color: rgb(24, 182, 255);
+  font-size: 18px;
+  margin-top: -10px;
+  font-weight: 100;
+}
